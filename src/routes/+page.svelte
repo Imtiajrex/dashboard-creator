@@ -1,1 +1,5 @@
-<h1>Welcome to Dashboardgen</h1>
+<script>
+	import Hero from '$lib/components/home/hero.svelte';
+</script>
+
+<Hero />
