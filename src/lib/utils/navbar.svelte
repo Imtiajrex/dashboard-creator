@@ -51,7 +51,7 @@
 				{/each}
 			</ul>
 		</div>
-		<a class="btn btn-ghost normal-case text-xl">daisyUI</a>
+		<a href="/" class="btn btn-ghost normal-case text-xl">daisyUI</a>
 	</div>
 	<div class="navbar-center hidden lg:flex">
 		<ul class="menu menu-horizontal px-1">
@@ -63,6 +63,7 @@
 		</ul>
 	</div>
 	<div class="navbar-end">
-		<a class="btn btn-light btn-outline">Get started</a>
+		<a href="/login" class="btn btn-ghost mx-3 ">Login</a>
+		<a href="/register" class="btn btn-light btn-outline">Get started</a>
 	</div>
 </div>
