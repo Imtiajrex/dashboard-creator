@@ -1,9 +1,9 @@
 <script lang="ts">
-	import type { Writable } from 'svelte/store';
-	let type = 'text';
+	import { writable, type Writable } from 'svelte/store';
+	export let type = 'text';
 	export let required = false;
 	export let label = 'Input';
-	export let value: Writable<string>;
+	export let value: Writable<string> = writable('');
 
 	export let placeholder = 'Enter ' + label.toLowerCase();
 	const id = label.toLowerCase().replace(' ', '-');
