@@ -1,12 +1,11 @@
 <script>
-	import '../app.postcss';
-
-	import Footer from '$lib/components/footer.svelte';
-	import Navbar from '$lib/utils/navbar.svelte';
+	import '../../app.postcss';
+	import Footer from '$lib/utils/home/footer.svelte';
+	import Navbar from '$lib/utils/home/navbar.svelte';
 </script>
 
 <Navbar />
-<div class="bg">
+<div class="bg bg-base-300">
 	<div class="min-h-screen">
 		<slot />
 	</div>
