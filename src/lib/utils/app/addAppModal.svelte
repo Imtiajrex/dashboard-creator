@@ -3,7 +3,7 @@
 
 	import Input from '$lib/components/form/input.svelte';
 	import { writable } from 'svelte/store';
-	let name = writable('');
+	let name = '';
 	let backend = '';
 	const backends = ['Firebase', 'Mysql', 'Pocketbase', 'MongoDB', 'PostgreSql'];
 	const closeModal = () => {
@@ -16,9 +16,8 @@
 <div class="modal backdrop-blur-md">
 	<div class="modal-box w-full max-w-3xl p-5 md:p-10 shadow-lg">
 		<h3 class="font-bold text-xl">Create App</h3>
-
 		<div class="my-8">
-			<Input label="Project name" value={name} />
+			<Input label="Project name" bind:value={name} />
 			<div class="mt-4">
 				<label for="" class="font-bold text-sm  "> Choose a Backend </label>
 				<div class="flex items-center gap-5 flex-wrap mt-3">

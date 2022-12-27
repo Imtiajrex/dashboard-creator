@@ -3,12 +3,12 @@
 	export let type = 'text';
 	export let required = false;
 	export let label = 'Input';
-	export let value: Writable<string> = writable('');
+	export let value: string = '';
 
 	export let placeholder = 'Enter ' + label.toLowerCase();
 	const id = label.toLowerCase().replace(' ', '-');
 	const handleInput = (e: any) => {
-		$value = type.match(/^(number|range)$/) ? +e.target.value : e.target.value;
+		value = type.match(/^(number|range)$/) ? +e.target.value : e.target.value;
 	};
 </script>
 

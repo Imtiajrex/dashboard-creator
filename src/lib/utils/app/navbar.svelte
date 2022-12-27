@@ -21,7 +21,7 @@
 			</label>
 			<ul
 				tabindex="0"
-				class="menu menu-compact dropdown-content mt-3 p-2 shadow-lg bg-black rounded-box w-52"
+				class="menu menu-compact dropdown-content mt-3 p-2 shadow-lg bg-stone-900 rounded-box w-52"
 			>
 				<li>
 					<a>Profile </a>
