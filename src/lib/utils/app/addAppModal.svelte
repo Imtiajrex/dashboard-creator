@@ -2,18 +2,17 @@
 	// @ts-nocheck
 
 	import Input from '$lib/components/form/input.svelte';
-	import { writable } from 'svelte/store';
+	export let isModalOpen = false;
 	let name = '';
 	let backend = '';
 	const backends = ['Firebase', 'Mysql', 'Pocketbase', 'MongoDB', 'PostgreSql'];
+
 	const closeModal = () => {
-		let input = document.getElementById('my-modal');
-		if (input) input.checked = false;
+		isModalOpen = false;
 	};
 </script>
 
-<input type="checkbox" checked={false} id="my-modal" class="modal-toggle" />
-<div class="modal backdrop-blur-md">
+<div class="modal backdrop-blur-md" class:modal-open={isModalOpen}>
 	<div class="modal-box w-full max-w-3xl p-5 md:p-10 shadow-lg">
 		<h3 class="font-bold text-xl">Create App</h3>
 		<div class="my-8">
@@ -24,7 +23,7 @@
 					{#each backends as bcend}
 						<button
 							class={`w-28 h-28 rounded-3xl flex flex-col p-3 ${
-								bcend.toLowerCase() == backend ? 'bg-primary' : 'bg-neutral'
+								bcend.toLowerCase() == backend ? 'bg-secondary' : 'bg-neutral'
 							}`}
 							on:click={() => (backend = bcend.toLowerCase())}
 						>

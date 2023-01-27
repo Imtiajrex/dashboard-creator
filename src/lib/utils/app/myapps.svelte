@@ -18,10 +18,10 @@
 <div class="grid lg:grid-cols-6 md:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-5 my-10">
 	{#each apps as app}
 		<div
-			class="relative bg-stone-900 p-5 h-48 rounded-lg shadow-lg hover:-translate-y-1 transition pt-10 flex flex-col"
+			class="relative bg-base-100 p-5 h-48 rounded-lg shadow-lg hover:-translate-y-1 transition pt-10 flex flex-col"
 		>
 			<!-- svelte-ignore a11y-missing-content -->
-			<a href={`/projects/${app.id}`} class="absolute w-full h-full z-10" />
+			<a href={`/projects/${app.id}`} class="absolute w-full h-full z-10 top-0 left-0" />
 
 			<img src={`/brand/${app.backend}.png`} class=" w-10 h-10 object-contain" alt={app.backend} />
 			<h3 class="my-2 font-bold text-lg">
